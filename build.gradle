@@ -1,0 +1,36 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.neu'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'redis.clients', name: 'jedis'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
+    implementation group: 'com.github.java-json-tools', name: 'json-schema-validator', version: '2.2.10'
+    implementation group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '7.2.1'
+    implementation group: 'io.searchbox', name: 'jest', version: '6.3.1'
+    implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '6.6.1'
+    implementation group: 'org.elasticsearch', name: 'elasticsearch', version: '6.6.1'
+    implementation group: 'com.google.api.client', name: 'google-api-client-auth-oauth2', version: '1.2.3-alpha'
+    implementation group: 'com.github.java-json-tools', name: 'json-schema-validator', version: '2.2.10'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
