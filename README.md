@@ -7,6 +7,5 @@ This project implemented:
 * Storage of data in key/value store
 
 
-Have tried to apply Spring Boot Filter, but couldn't be able to find out why it filtered all urls (not only /plans/*, but /auth). So had to verify token for each controller instead. 
-
-
+Have tried to apply Spring Boot Filter, but couldn't be able to find out why it filtered out all urls (not only /plans/*, but /auth). So had to verify token for each controller instead. 
+In the 1st version, I used recursion to deal with nested objects. 
